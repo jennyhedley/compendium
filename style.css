@@ -48,7 +48,17 @@ h2 {
   font-style: bold;
   text-shadow: 1.5px 1.5px #000000;
 }
-p {margin-top:0; margin-bottom:0;}
+h3 {
+  font-family: "Rock Salt", cursive;
+  font-size: 1.6em;
+  font-style: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 * {
   box-sizing: border-box;
 }
@@ -97,17 +107,19 @@ body {
   font-family: "Source Code Pro", monospace;
   font-size: 12px;
 }
-
 .card2 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  padding: 16px;
+  padding: 10px;
   border-radius: 10px 10px 10px 10px;
-  text-align: center;
+  text-align: left;
   background-color: #fffggg;
+  background-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2Fcourt.png?v=1618808645423");
+  background-position: center;
+  background-size: cover;
 }
 .card3 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  padding: 16px;
+  padding: 10px;
   border-radius: 10px 10px 10px 10px;
   text-align: center;
   background-color: #fffggg;
@@ -120,6 +132,7 @@ body {
   text-align: left;
   background-color: #fffggg;
 }
+
 .card5 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 16px;
