@@ -120,9 +120,9 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 10px;
   border-radius: 10px 10px 10px 10px;
-  text-align: left;
+  text-align: center;
   background-color: #fffggg;
-  background-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2Fcourt.png?v=1618808645423"); 
+  background-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2Fcourt%20copy.png?v=1618813440424"); 
   background-position: center;
   background-size: cover;
 }
