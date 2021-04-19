@@ -42,7 +42,7 @@ body {
 }
 
 h1 {
-  text-shadow: 1.5px 1.5px #FFFFFF;
+  text-shadow: 1.5px 1.5px white;
 }
 h2 {
   font-style: bold;
@@ -50,10 +50,18 @@ h2 {
 }
 h3 {
   font-family: "Rock Salt", cursive;
+  text-shadow: 1px 1px red;
   font-size: 1.6em;
   font-style: bold;
   margin-top: 0;
   margin-bottom: 0;
+  text-align: center;
+}
+h4 {
+  font-family: 'Zen Dots', cursive;
+  font-size: 1.3em;
+  font-style: bold;
+  text-align: center;
 }
 p {
   margin-top: 0;
@@ -121,8 +129,11 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 10px;
   border-radius: 10px 10px 10px 10px;
-  text-align: center;
-  background-color: #fffggg;
+  text-align: left;
+  background-color: blue;
+  color: white;
+  font-family: "PT Serif", serif;
+  font-size: 12px;
 }
 .card4 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
