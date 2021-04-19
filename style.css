@@ -1,4 +1,22 @@
-/* CSS files add styling rules to your content */
+/* change link properties */
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+a:active {
+  text-decoration: underline;
+  color: #000000;
+}
+/* set background image for poem title */
 header {
   background-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2Fstationery-155143_960_720.png?v=1618796683465");
   background-attachment: fixed;
@@ -13,7 +31,7 @@ body {
 
 h1 {
   font-style: bold;
-  color: #000000;
+  text-shadow: 1.5px 1.5px #000000;
 }
 
 * {
@@ -22,6 +40,7 @@ h1 {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
 }
 
 /* Float four columns side by side */
@@ -88,6 +107,15 @@ body {
   padding: 16px;
   text-align: center;
   background-color: #fffggg;
+  background-image: url("https://chickenwire.netlify.app/img/chickenwire.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px 10px 10px 10px;
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 1.1px;
+  line-height: normal;
+  color: #FF0000;
 }
 
 /* One wide column */
