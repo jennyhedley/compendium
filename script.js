@@ -84,12 +84,10 @@ function emailToMum() {
     "I filed his taxes for him"
   ];
 
-  
   return (
     "Dear Mum, " +
     getRandomFromList(openingSent) +
     ". " +
-  
     getRandomFromList(missySent1) +
     ". " +
     getRandomFromList(missySent2) +
@@ -98,7 +96,7 @@ function emailToMum() {
     ". " +
     getRandomFromList(gSent2) +
     ". " +
-    getRandomFromList(openingSent) +
+    getRandomFromList(closingSent) +
     ". " +
     "Love, Jenny Cat"
   );
@@ -115,19 +113,16 @@ function typeWriter() {
 //end of code for email to mum
 //function psych history
 function psychFunction() {
-            var x = document.getElementById("subject").value;
-            var y = document.getElementById("history").value;
-
-switch (x,y) {
-  case 'she','belief':
-  console.log("this is her belief");
-    break;
-  case 'he','belief':
-    console.log("this is his belief");
-    break;
+  var x = document.getElementById("subject").value;
+  var y = document.getElementById("history").value;
+  switch ((x, y)) {
+    case ("she", "belief"):
+      console.log("this is her belief");
+      break;
+    case ("he", "belief"):
+      console.log("this is his belief");
+      break;
+    default:
+      console.log("results go here");
+  }
 }
-}
-function psychResults () {
-  console.log(psychFunction);
-}
-psychResults ();
