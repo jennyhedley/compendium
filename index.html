@@ -90,19 +90,14 @@
             Psych Evaluation
           </h3>
           <br />
-          <label for="Subject"></label>
-
-          <select name="subject" id="subject" class="text-box">
-            <option value="sunject">Subject</option>
+          <select id="subject" class="text-box" onchange="psychFunction()">
+            <option value="">Subject</option>
             <option value="she">She</option>
             <option value="he">He</option>
           </select>
           <br />
-
-          <label for="history"></label>
-
-          <select name="history" id="history" class="text-box">
-            <option value="caseHistory">Case History</option>
+          <select id="history" class="text-box" onchange="psychFunction()">
+            <option value="">Case History</option>
             <option value="belief">Belief</option>
             <option value="developmentalHistory">Developmental History</option>
             <option value="familyResemblance">Family Resemblance</option>
@@ -120,10 +115,7 @@
           </select>
           <br />
           <br />
-          <p>
-            it is her belief that her former partner should have supervised
-            contact and hand over until he can establish that he is drug free
-          </p>
+          <p id="result"></p>
           <br />
         </div>
       </div>

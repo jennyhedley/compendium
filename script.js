@@ -1,3 +1,4 @@
+//start of code for email to mum
 //a function to select random item from a list
 function getRandomFromList(list) {
   return list[Math.floor(Math.random() * list.length)];
@@ -82,11 +83,13 @@ function emailToMum() {
     "I feel like if the liquids go down faster rather than trickle down in that bad way they will shoot past your epiglottis fast enough to not get caught",
     "I filed his taxes for him"
   ];
-  // set up the counter
+
+  
   return (
     "Dear Mum, " +
     getRandomFromList(openingSent) +
     ". " +
+  
     getRandomFromList(missySent1) +
     ". " +
     getRandomFromList(missySent2) +
@@ -109,3 +112,22 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
+//end of code for email to mum
+//function psych history
+function psychFunction() {
+            var x = document.getElementById("subject").value;
+            var y = document.getElementById("history").value;
+
+switch (x,y) {
+  case 'she','belief':
+  console.log("this is her belief");
+    break;
+  case 'he','belief':
+    console.log("this is his belief");
+    break;
+}
+}
+function psychResults () {
+  console.log(psychFunction);
+}
+psychResults ();
