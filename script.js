@@ -1,3 +1,4 @@
+//start of code for email to mum
 //a function to select random item from a list
 function getRandomFromList(list) {
   return list[Math.floor(Math.random() * list.length)];
@@ -82,7 +83,7 @@ function emailToMum() {
     "I feel like if the liquids go down faster rather than trickle down in that bad way they will shoot past your epiglottis fast enough to not get caught",
     "I filed his taxes for him"
   ];
-  // set up the counter
+
   return (
     "Dear Mum, " +
     getRandomFromList(openingSent) +
@@ -95,7 +96,7 @@ function emailToMum() {
     ". " +
     getRandomFromList(gSent2) +
     ". " +
-    getRandomFromList(openingSent) +
+    getRandomFromList(closingSent) +
     ". " +
     "Love, Jenny Cat"
   );
@@ -109,3 +110,47 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
+//end of code for email to mum
+//function psych history - HIDDEN BECAUSE DISPLAYED RESULTS FOR "SHE" ONLY
+/* 
+function psychFunction() {
+  var x = document.getElementById("subject").value;
+  var y = document.getElementById("history").value;
+  switch ((x, y)) {
+    case ("she", "belief"):
+      console.log("this is her belief");
+      break;
+    case ("he","belief"):
+      console.log("this is his belief");
+      break;
+      case("she", "developmentalHistory"):
+      console.log("her dev hist");
+      break;
+      case("he", "developmentalHistory"):
+      console.log("his dev hist");
+      break;
+    default:
+      console.log("results go here");
+  }
+} 
+*/
+//write a new psych function because the above one ignores the "he" values
+function psychFunction() {
+  var x = document.getElementById("subject").value;
+  var y = document.getElementById("history").value;
+  if (x === "she" && y==="belief") {
+    console.log("this is HER belief");
+  } 
+ else if (x === "he" && y === "belief") {
+    console.log("this is HIS belief");
+  } else if (x === "she" && y === "developmentalHistory") {
+    console.log("her dev hist");
+  } else if (x === "he" && y === "developmentalHistory") {
+    console.log("HIS dev hist");
+  } else if (x === "she" && y === "familyResemblance") {
+    console.log("her fam");
+  } else if (x === "he" && y === "familyResemblance") {
+    console.log("HIS fam");
+  }
+}
+
