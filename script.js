@@ -153,6 +153,5 @@ function psychFunction() {
     console.log("HIS fam");
   }
 }
-
 //end of psych function
 
