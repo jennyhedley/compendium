@@ -133,25 +133,32 @@ function psychFunction() {
       console.log("results go here");
   }
 } 
+
 */
 //write a new psych function because the above one ignores the "he" values
+function addPsychEval(evalText){
+  const subjectContent = document.getElementById("subject-content");
+  subjectContent.innerText = evalText;
+}
 function psychFunction() {
   var x = document.getElementById("subject").value;
   var y = document.getElementById("history").value;
   if (x === "she" && y==="belief") {
-    console.log("this is HER belief");
+    addPsychEval("this is HER belief");
   } 
  else if (x === "he" && y === "belief") {
-    console.log("this is HIS belief");
+    addPsychEval("this is HIS belief");
   } else if (x === "she" && y === "developmentalHistory") {
-    console.log("her dev hist");
+    addPsychEval("her dev hist");
   } else if (x === "he" && y === "developmentalHistory") {
-    console.log("HIS dev hist");
+    addPsychEval("HIS dev hist");
   } else if (x === "she" && y === "familyResemblance") {
-    console.log("her fam");
+    addPsychEval("her fam");
   } else if (x === "he" && y === "familyResemblance") {
-    console.log("HIS fam");
+    addPsychEval("HIS fam");
   }
 }
+
+
 //end of psych function
 
