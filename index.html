@@ -22,9 +22,6 @@
       href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
       rel="stylesheet"
     />
-    <!-- font for cult body -->
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
     <!-- font for card1 -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -83,12 +80,23 @@
           <body onload="typeWriter()"></body>
           <p id="type"></p>
           <br />
-          <!-- I want this button to trigger a new email--><button
-            onclick="typewriter()"
-          >
-            send
-          </button>
+              <p id="salutation"></p>
+ <br />
+    <p id="emailParagraph1"></p>
+ <br />
+    <p id="emailParagraph2"></p>
+ <br />
+    <p id="emailParagraph3"></p>
+           <br />
+    <p id="emailParagraph4"></p>
+           <br />
+    <p id="emailClosingSalutation"></p>
+
+    <br />
           <!-- end typewriter code-->
+              <button id="button-2" onclick="typeWriter">
+      send email
+    </button>
         </div>
       </div>
       <!-- formatting and words for psych eval-->
@@ -123,9 +131,8 @@
           </select>
           <br />
           <br />
-       <!-- results of psych eval go here-->    
-          <p id="subject-content">
-          </p>
+          <!-- results of psych eval go here-->
+          <p id="subject-content"></p>
           <br />
           <br />
           <br />
