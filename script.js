@@ -1,5 +1,6 @@
 //start of code for email to mum
 //a function to select random item from a list
+const buttonEmail = document.getElementById("button-2");
 function getRandomFromList(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
@@ -13,12 +14,12 @@ function emailToMum() {
   const openingSent = [
     "I finally caught up on some sleep and can tell you about the circus",
     "I ran out of happy pills so have to go to the pharmacy today",
-    "I will try to write but the letter from N just made me so angry, like she was guilt tripping me to return",
+    "I'll try to write but the letter from N just made me so angry, like she was guilt tripping me to return",
     "I wrote you a letter and had to log into your account to delete it because I was so upset",
     "I need a little space to allow things to work out and to lose this feeling of desperado",
-    "I am a little stressed right now",
-    "I am in a mood where things keep going wrong",
-    "I am in a tough situation right now",
+    "I'm a little stressed right now",
+    "I'm in a mood where things keep going wrong",
+    "I'm in a tough situation right now",
     "I bought a one-way ticket for $1300 USD"
   ];
   const missySent1 = [
@@ -47,10 +48,10 @@ function emailToMum() {
     "G just bought himself his own car since he's working lots of double shifts and part of the deal when we bought our car together is that I have exclusive use of the car on my work nights",
     "G left all these tearful messages saying, What have you done to us",
     "I ran out to move the car and drink coffee and field off calls from G",
-    "I had a very good sales weekend then just as I was about to head home at 4am G called and asked if I could give him a lift home from King Street",
+    "I had a very good sales weekend then just as I was about to head home at 4am, G called and asked if I could give him a lift home from King Street",
     "I moved out for good just under two weeks ago",
     "Every day I deal with G crying in my ear, wanting reconciliation and blaming me for his destruction",
-    "I am feeling better about G since he is accepting the split better and no longer is calling to blame me for ruining his life or threatening to die"
+    "I'm feeling better about G since he is accepting the split better, and no longer is calling to blame me for ruining his life, or threatening to die"
   ];
   const gSent2 = [
     "He says, You don't love me, You don't want to see me, blah blah blah",
@@ -58,13 +59,13 @@ function emailToMum() {
     "I promised that we could date once or twice a week as a transitional thing to help him come to terms better",
     "I had a feeling so I ran into the pub in slippers and bootie shorts and wagged my finger and walked out",
     "He gets tearful and hopeful but I'm not going back",
-    "He is being surprisingly well behaved",
+    "He's being surprisingly well behaved",
     "He lets me come visit Missy",
     "He screamed obscenities at me and threw things at the car window since I would not go inside",
     "He still gets into moods and tears, but it's far better now that he is reaching a certain acceptance of my decision",
     "He was so scary the other night",
-    "He will have to behave in public",
-    "He will have to treat me right in order for me to visit him and continue a friendship-relationship",
+    "He'll have to behave in public",
+    "He'll have to treat me right in order for me to visit him and continue a friendship-relationship",
     "He won't let me have the cat here even though he claimed he didn't want her",
     "He's been good about not calling me and stuff",
     "He's got tenants so I'm no longer paying rent there",
@@ -83,24 +84,24 @@ function emailToMum() {
     "I feel like if the liquids go down faster rather than trickle down in that bad way they will shoot past your epiglottis fast enough to not get caught",
     "I filed his taxes for him"
   ];
+  const salutation1 = document.getElementById("salutation");
+  const paragraph1 = document.getElementById("emailParagraph1");
+  const paragraph2 = document.getElementById("emailParagraph2");
+  const paragraph3 = document.getElementById("emailParagraph3");
+  const paragraph4 = document.getElementById("emailParagraph4");
+  const closingSal = document.getElementById("emailClosingSalutation");
 
-  return (
-    "Dear Mum, " +
-    getRandomFromList(openingSent) +
-    ". " +
-    getRandomFromList(missySent1) +
-    ". " +
-    getRandomFromList(missySent2) +
-    ". " +
-    getRandomFromList(gSent1) +
-    ". " +
-    getRandomFromList(gSent2) +
-    ". " +
-    getRandomFromList(closingSent) +
-    ". " +
-    "Love, Jenny Cat"
-  );
+  salutation1.innerText = ["Dear Mum,"];
+  paragraph1.innerText = getRandomFromList(openingSent) + ".";
+  paragraph2.innerText =
+    getRandomFromList(missySent1) + ". " + getRandomFromList(missySent2) + ". ";
+  paragraph3.innerText =
+    getRandomFromList(gSent1) + ". " + getRandomFromList(gSent2) + ".";
+  paragraph4.innerText = getRandomFromList(closingSent) + ".";
+  closingSal.innerText = ["Lots of love xx"];
 }
+
+buttonEmail.addEventListener("click", emailToMum);
 
 //typewriter function
 function typeWriter() {
@@ -111,31 +112,7 @@ function typeWriter() {
   }
 }
 //end of code for email to mum
-//function psych history - HIDDEN BECAUSE DISPLAYED RESULTS FOR "SHE" ONLY
-/* 
-function psychFunction() {
-  var x = document.getElementById("subject").value;
-  var y = document.getElementById("history").value;
-  switch ((x, y)) {
-    case ("she", "belief"):
-      console.log("this is her belief");
-      break;
-    case ("he","belief"):
-      console.log("this is his belief");
-      break;
-      case("she", "developmentalHistory"):
-      console.log("her dev hist");
-      break;
-      case("he", "developmentalHistory"):
-      console.log("his dev hist");
-      break;
-    default:
-      console.log("results go here");
-  }
-} 
-
-*/
-//write a new psych function because the above one ignores the "he" values
+//function psych history
 function addPsychEval(evalText) {
   const subjectContent = document.getElementById("subject-content");
   subjectContent.innerText = evalText;
@@ -200,21 +177,37 @@ function psychFunction() {
       "convicted of a number of offences ...  indecent exposure ...  obtaining property by deception ...  burglary ... theft ... possession of a firearm ...  possession of a silencer ... drug related offenses"
     );
   } else if (x === "she" && y === "symptomaticHistory") {
-    addPsychEval("some tendency to impulsive spending ...  she and her former partner [#3] also gambled ...  between the ages of sixteen and seventeen, she had a diagnosis of Bulimia which required a three week hospitalisation and there have been no relapses ...  she took a number of anti depressants including Prozac, Effexor and Zoloft");
+    addPsychEval(
+      "some tendency to impulsive spending ...  she and her former partner [#3] also gambled ...  between the ages of sixteen and seventeen, she had a diagnosis of Bulimia which required a three week hospitalisation and there have been no relapses ...  she took a number of anti depressants including Prozac, Effexor and Zoloft"
+    );
   } else if (x === "he" && y === "symptomaticHistory") {
-    addPsychEval("impulsive spending ...  he was gambling, with driving he loves speed ...  periods of accessing pornography, more than he is comfortable with ... history of promiscuity and infidelity ... suicidal thoughts but never any suicidal plans or attempts");
+    addPsychEval(
+      "impulsive spending ...  he was gambling, with driving he loves speed ...  periods of accessing pornography, more than he is comfortable with ... history of promiscuity and infidelity ... suicidal thoughts but never any suicidal plans or attempts"
+    );
   } else if (x === "she" && y === "mentalState") {
-    addPsychEval("clearly shy and anxious ... good eye contact ... no psychomotor abnormalities");
+    addPsychEval(
+      "clearly shy and anxious ... good eye contact ... no psychomotor abnormalities"
+    );
   } else if (x === "he" && y === "mentalState") {
-    addPsychEval("wanting to take control of the interview ... with good eye contact ... no evidence of any thought disorder");
+    addPsychEval(
+      "wanting to take control of the interview ... with good eye contact ... no evidence of any thought disorder"
+    );
   } else if (x === "she" && y === "diagnosis") {
-    addPsychEval("Mixed Anxiety Disorder with features of Social and Generalised Anxiety");
+    addPsychEval(
+      "Mixed Anxiety Disorder with features of Social and Generalised Anxiety"
+    );
   } else if (x === "he" && y === "diagnosis") {
-    addPsychEval("Social and Generalised Anxiety Disorder ...  Drug induced psychosis ...  Borderline Personality Disorder");
+    addPsychEval(
+      "Social and Generalised Anxiety Disorder ...  Drug induced psychosis ...  Borderline Personality Disorder"
+    );
   } else if (x === "she" && y === "discussion") {
-    addPsychEval("she was deported from Australia in [date] because her former partner [#3] told the Immigration Department that she was working as an act of revenge and in an attempt to force her to return to America with him ...  Dealing with her emotions and her instinct is something that she understands she has not done well and she has been working with various groups to help her become, emotionally, more aware");
+    addPsychEval(
+      "she was deported from Australia in [date] because her former partner [#3] told the Immigration Department that she was working as an act of revenge and in an attempt to force her to return to America with him ...  Dealing with her emotions and her instinct is something that she understands she has not done well and she has been working with various groups to help her become, emotionally, more aware"
+    );
   } else if (x === "he" && y === "discussion") {
-    addPsychEval("[X] suffered a drug induced psychosis which resulted in a number of paranoid behaviours including stalking and planting a listening device ...  He denies domestic violence, he admits to there being drug scales in the boot of the car, which he said were there from [date] when he used them because he disliked being cheated by drug dealers");
+    addPsychEval(
+      "[X] suffered a drug induced psychosis which resulted in a number of paranoid behaviours including stalking and planting a listening device ...  He denies domestic violence, he admits to there being drug scales in the boot of the car, which he said were there from [date] when he used them because he disliked being cheated by drug dealers"
+    );
   }
   //need these closing braces
 }
@@ -485,7 +478,7 @@ const sevenSyllables = [
   "it's an important lesson",
   "but at a tremendous cost"
 ];
-const button = document.getElementById("button-1");
+const buttonCult = document.getElementById("button-1");
 
 function changeText() {
   const paragraph = document.getElementById("haiku-1-1");
@@ -507,5 +500,5 @@ function changeText() {
   paragraphEight.innerText = getRandomFromList(sevenSyllables);
   paragraphNine.innerText = getRandomFromList(fiveSyllables);
 }
-button.addEventListener("click", changeText);
+buttonCult.addEventListener("click", changeText);
 //end of haiku function
