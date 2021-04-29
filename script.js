@@ -144,20 +144,80 @@ function psychFunction() {
   var x = document.getElementById("subject").value;
   var y = document.getElementById("history").value;
   if (x === "she" && y === "belief") {
-    addPsychEval("this is HER belief");
+    addPsychEval(
+      "it is her belief that her former partner should have supervised contact and handover until he can establish that he is drug free"
+    );
   } else if (x === "he" && y === "belief") {
-    addPsychEval("this is HIS belief");
+    addPsychEval(
+      "his ex wife believes that he is a dangerous person and a drug addict"
+    );
   } else if (x === "she" && y === "developmentalHistory") {
-    addPsychEval("her dev hist");
+    addPsychEval(
+      "her parents separated when she was three because her father was unfaithful with his secretary"
+    );
   } else if (x === "he" && y === "developmentalHistory") {
-    addPsychEval("HIS dev hist");
+    addPsychEval("currently living with his sister and his mother");
   } else if (x === "she" && y === "familyResemblance") {
-    addPsychEval("her fam");
+    addPsychEval(
+      "she is shy, a worrier but also has some marked stubborn, obsessional qualities"
+    );
   } else if (x === "he" && y === "familyResemblance") {
-    addPsychEval("HIS fam");
+    addPsychEval(
+      "like both parents he has a temper with a long fuse before occasionally exploding"
+    );
+  } else if (x === "she" && y === "academicHistory") {
+    addPsychEval("she was one of the top students");
+  } else if (x === "he" && y === "academicHistory") {
+    addPsychEval("socially he did well with no serious bullying");
+  } else if (x === "she" && y === "workHistory") {
+    addPsychEval(
+      "making costumes for a local ballet company ...  hospitality ...  legal secretary ...  magazine articles ...  film production ...  importing lingerie and initially selling in the strip clubs but now selling online"
+    );
+  } else if (x === "he" && y === "workHistory") {
+    addPsychEval(
+      "completed the practical part of his apprenticeship but not the theory ...  suffered a work related injury to his neck which then required spinal fusion ...  he last worked in [date], when he was imprisoned and has not worked since 'because I've been enjoying life too much - partying' ...  his occupation now during the day is mainly watching television"
+    );
+  } else if (x === "she" && y === "relationshipHistory") {
+    addPsychEval(
+      "[she] reports four significant relationships: [#1] ended because [she] wanted to travel; [#2] she was unaware of his addiction to gambling and alcohol ... his anger and violence escalated ...  he broke her wrist; [#3] he worked with her and was unfaithful and stole from her; [#4] [she] began a relationship with [X], aged forty nine ...  she 'ignored the red flags - I never want to see the red flags' ... [X] was increasingly possessive and controlling, he behaved as if he owned her. With his drug use he became more paranoid, jealous and his jealously [sic] was encouraged by his friends"
+    );
+  } else if (x === "he" && y === "relationshipHistory") {
+    addPsychEval(
+      "[X] reports four significant relationships: [#1] She was beautiful, 'like a trophy' ...  The relationship...ended when he met [#2], the woman who introduced him to drugs ...  he was 'like a kid in a lolly shop wanting more and more drugs' ...  his wife reported him to the police; [#2]  this relationship lasted while he was imprisoned but ended when he finished parole ... he had lost trust in her; [#3] lasted for a few months; [#4] [X] met [her] aged thirty four, after helping one of her friends to get home safely after her drink was spiked ...  he reports an increasing loss of trust at a time when he was frankly psychotic but also following treatment"
+    );
+  } else if (x === "she" && y === "drugAndAlcoholHistory") {
+    addPsychEval(
+      "she has only ever been a casual recreational drug user ...  occasionally cocaine, which she disliked ...  ecstasy and marijuana"
+    );
+  } else if (x === "he" && y === "drugAndAlcoholHistory") {
+    addPsychEval(
+      "ecstasy and cocaine which he used between [year] and [year] ...  once his parole ended he then had a 'ten month cocaine bender' ... he started to use methamphetamine for two months  ... [X] developed a paranoid psychotic illness ...  he had convictions for possession, cultivating and trafficking marijuana"
+    );
+  } else if (x === "she" && y === "forensicHistory") {
+    addPsychEval("[none]");
+  } else if (x === "he" && y === "forensicHistory") {
+    addPsychEval(
+      "convicted of a number of offences ...  indecent exposure ...  obtaining property by deception ...  burglary ... theft ... possession of a firearm ...  possession of a silencer ... drug related offenses"
+    );
+  } else if (x === "she" && y === "symptomaticHistory") {
+    addPsychEval("some tendency to impulsive spending ...  she and her former partner [#3] also gambled ...  between the ages of sixteen and seventeen, she had a diagnosis of Bulimia which required a three week hospitalisation and there have been no relapses ...  she took a number of anti depressants including Prozac, Effexor and Zoloft");
+  } else if (x === "he" && y === "symptomaticHistory") {
+    addPsychEval("impulsive spending ...  he was gambling, with driving he loves speed ...  periods of accessing pornography, more than he is comfortable with ... history of promiscuity and infidelity ... suicidal thoughts but never any suicidal plans or attempts");
+  } else if (x === "she" && y === "mentalState") {
+    addPsychEval("clearly shy and anxious ... good eye contact ... no psychomotor abnormalities");
+  } else if (x === "he" && y === "mentalState") {
+    addPsychEval("wanting to take control of the interview ... with good eye contact ... no evidence of any thought disorder");
+  } else if (x === "she" && y === "diagnosis") {
+    addPsychEval("Mixed Anxiety Disorder with features of Social and Generalised Anxiety");
+  } else if (x === "he" && y === "diagnosis") {
+    addPsychEval("Social and Generalised Anxiety Disorder ...  Drug induced psychosis ...  Borderline Personality Disorder");
+  } else if (x === "she" && y === "discussion") {
+    addPsychEval("she was deported from Australia in [date] because her former partner [#3] told the Immigration Department that she was working as an act of revenge and in an attempt to force her to return to America with him ...  Dealing with her emotions and her instinct is something that she understands she has not done well and she has been working with various groups to help her become, emotionally, more aware");
+  } else if (x === "he" && y === "discussion") {
+    addPsychEval("[X] suffered a drug induced psychosis which resulted in a number of paranoid behaviours including stalking and planting a listening device ...  He denies domestic violence, he admits to there being drug scales in the boot of the car, which he said were there from [date] when he used them because he disliked being cheated by drug dealers");
   }
+  //need these closing braces
 }
-
 //end of psych function
 
 //start of haiku function for "I lost my husband to a cult"
