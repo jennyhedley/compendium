@@ -85,10 +85,21 @@ body {
 font-family: "PT Serif", serif; font-size: 14px; margin: 4px 2px;}
 .button4 {border-radius: 12px;}
 .button5 {border-radius: 50%;}
+
 /* Float four columns side by side */
 .column {
   float: left;
   width: 25%;
+  padding: 0 6px;
+}
+.columnS {
+  float: left;
+  width: 20%;
+  padding: 0 6px;
+}
+.columnL {
+  float: left;
+  width: 30%;
   padding: 0 6px;
 }
 

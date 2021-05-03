@@ -13,14 +13,32 @@ var speed = 100;
 function emailToMum() {
   const openingSent = [
     "I finally caught up on some sleep and can tell you about the circus",
+    "I notice you did not respond to my emails",
+    "Can't wait to see my Mama Bird!",
     "I ran out of happy pills so have to go to the pharmacy today",
     "I'll try to write but the letter from N just made me so angry, like she was guilt tripping me to return",
+    "Sorry for all the misunderstandings",
+    "What are you doing in the midst of all the family chaos",
     "I wrote you a letter and had to log into your account to delete it because I was so upset",
     "I need a little space to allow things to work out and to lose this feeling of desperado",
     "I'm a little stressed right now",
     "I'm in a mood where things keep going wrong",
     "I'm in a tough situation right now",
-    "I bought a one-way ticket for $1300 USD"
+    "Today I took a friend to the circus gym and showed her some basics while the all white circus cat resident sun-bathed",
+    "I got tickets to see La Clique at the Speigaltent",
+    "Today I've started on six outfits to fill my empty rack",
+    "I'm in the pubescent internet cafe from hell - dark and full of pimply boys swearing at their role-play games",
+    "I've been driving around with my eyes closed, working nonstop to pay the bills and settle ownership of this and that with G",
+    "If I get into circus school, it starts end of January",
+    "It rained last night, so sales were dismal because the girls were making no money",
+    "Lost phone for 26 hours or so",
+    "May need more happy pills, unless I force this feeling to pass",
+    "No word from circus school yet",
+    "The balloon people cancelled the flight because of RAIN",
+    "The manager at one of the clubs got fired so the other manager is running around drunk and angry causing stress and uncertainty",
+    "Town was very quiet and the few customers were not making money",
+    "My sewing machine is back, yay, and much to do before work tonight",
+    "I worked from ten in the morning until three in the morning, with a two hour dinner break"
   ];
   const missySent1 = [
     "Missy at least settled in at G's okay and he gave me $500 cash for my car",
@@ -29,7 +47,14 @@ function emailToMum() {
     "Missy is so fluffy and happy living with the girls this week",
     "Missy is under the covers again",
     "I get to keep Missy for a week because G's freako brother is coming to town and Missy hates him",
-    "I may go pick up Missy today but I don't really want to run into G"
+    "I may go pick up Missy today but I don't really want to run into G",
+    "The good news is that Missy doesn't hate me for leaving",
+    "Well at first Missy stared at me like I was an apparition",
+    "I'm training Missy to spew into my paw (covered by tissue of course), or else she goes onto the wood floor so I can clean easier",
+    "Last night scooped up Missy for week of custody",
+    "Yesterday stayed in bed with Missy",
+    "Have to return Missy to her father on Sunday",
+    "It was so hard to say goodbye to Missy"
   ];
   const missySent2 = [
     "I don't know how she manages with all my thrashing",
@@ -37,7 +62,18 @@ function emailToMum() {
     "I will sure miss her though",
     "G lets her sleep under the covers so now she is totally spoiled",
     "G won't let me have Princess Missy and I miss her",
-    "I want my cat though"
+    "I want my cat though",
+    "She is an easier cuddle than Chloe",
+    "She is like my shadow",
+    "She is pure joy",
+    "She sleeps between my legs every night now",
+    "She stays on the bed while I pack",
+    "She's fluffy and SO HAPPY to be with the girls",
+    "She's showing her age, not jumping so high",
+    "Since then she has been quite the usual cuddle addict",
+    "Sometimes I accidentally bury her under clothing and forget she's there",
+    "Sticking to kibble from now on",
+    "I took off my stinky tops and she rolled over them in wild ecstasy, picking up the scent"
   ];
 
   const gSent1 = [
@@ -70,19 +106,61 @@ function emailToMum() {
     "He's been good about not calling me and stuff",
     "He's got tenants so I'm no longer paying rent there",
     "He's sad and self-pitying but I'm glad he's keeping himself on a good path now",
-    "He's still in love but realises it's over"
+    "He's still in love but realises it's over",
+    "I filed his taxes for him"
   ];
-  const closingSent = [
-    "I just drove away",
-    "I keep having weird dreams about packing up my stuff from my father's house",
+  const gSent3 = [
+    "And he managed to make some big steps to combat his gambling",
+    "Don't want to see him again",
+    "Had to hang up on him, just about",
+    "Had to stay super calm to get him to leave the car without him being violent",
+    "His anger is just too hot for comfort, and I told him he needs to continue therapy and self-searching, etc",
+    "I'm happy he hasn't destroyed himself to try to control me",
+    "I've oft told him of late that it's time to learn to be happy alone",
+    "Meanwhile, G's counseling sessions are kicking in and when we argued the other night he finally realised that the problem was his, then he apologised and has been on sparkling behavior ever since",
+    "On Sunday I have to make good on my promise to take G out for his birthday",
+    "On Tuesday, day of departure, I have to give car and cat to G and spend time with him",
+    "He confessed to therapist and is back on track",
+    "Good to be free of G, yes",
+    "So today my big move happened with no notice because G was sending texts from work that gave me a bad feeling",
     "I keep saying I won't marry a gambler",
-    "I finally broke even",
     "I feel so so sad and sick about it",
     "I can get used to his new self",
+    "I just drove away"
+  ];
+
+  const closingSent = [
+    "I keep having weird dreams about packing up my stuff from my father's house",
     "I must have had my most un-fun birthday ever so I request a do-over",
     "I truly budgeted for having these final six weekends of sales",
     "I feel like if the liquids go down faster rather than trickle down in that bad way they will shoot past your epiglottis fast enough to not get caught",
-    "I filed his taxes for him"
+    "The only happy part of my life is going into work and bringing the girls their clothing orders, because I am like Santa Claus, and so long as I have gifts, everyone is happy",
+
+    "One month left here to sort everything out",
+    "No money = trapped kitty",
+
+    "Much is going good in my world, but I am also devastated",
+    "Very hectic tiring couple weeks here",
+
+    "Balloons keep getting cancelled due to inclement weather so other birthday must be arranged!"
+  ];
+  const closingSent2 = [
+    "Back to organization!",
+    "I'm so much happier not being in a dysfunctional relationship",
+    "I think it is time for me to leave this crazy internet place and find my aerial students",
+    "Brave of you to spend four hours in the car with the father of your giants",
+
+    "Do you have any medical MJ to share with your daughter",
+    "You so kind pretty birdy",
+    "Going out to sell clothes in a bit, but must rest and do dishes first",
+    "Got to go teach aerial",
+    "Meow meow mew sleepy",
+    "Meow meow lub you",
+    "Meow",
+    "Sorry but my computer battery is dying as I type, so I will write more soon",
+    "My only light at the end of the tunnel is the clothing and the circus",
+    "No money for food",
+    "No money for insurance premiums"
   ];
   const salutation1 = document.getElementById("salutation");
   const paragraph1 = document.getElementById("emailParagraph1");
@@ -96,8 +174,19 @@ function emailToMum() {
   paragraph2.innerText =
     getRandomFromList(missySent1) + ". " + getRandomFromList(missySent2) + ". ";
   paragraph3.innerText =
-    getRandomFromList(gSent1) + ". " + getRandomFromList(gSent2) + ".";
-  paragraph4.innerText = getRandomFromList(closingSent) + ".";
+    getRandomFromList(gSent1) +
+    ". " +
+    getRandomFromList(gSent2) +
+    "." +
+    " " +
+    getRandomFromList(gSent3) +
+    ".";
+  paragraph4.innerText =
+    getRandomFromList(closingSent) +
+    "." +
+    " " +
+    getRandomFromList(closingSent2) +
+    ".";
   closingSal.innerText = ["Lots of love xx"];
 }
 
