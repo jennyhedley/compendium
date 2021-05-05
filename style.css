@@ -85,10 +85,26 @@ body {
 font-family: "PT Serif", serif; font-size: 14px; margin: 4px 2px;}
 .button4 {border-radius: 12px;}
 .button5 {border-radius: 50%;}
+
 /* Float four columns side by side */
 .column {
   float: left;
   width: 25%;
+  padding: 0 6px;
+}
+.columnS {
+  float: left;
+  width: 20%;
+  padding: 0 6px;
+}
+.columnL {
+  float: left;
+  width: 30%;
+  padding: 0 6px;
+}
+.columnXl {
+  float: left;
+  width: 35%;
   padding: 0 6px;
 }
 
@@ -149,12 +165,13 @@ font-family: "PT Serif", serif; font-size: 14px; margin: 4px 2px;}
   background-color: blue;
   color: white;
   font-family: "PT Serif", serif;
-  font-size: 14px;
+  font-size: 12px;
 }
 /* card4 is the search results */
 .card4 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 10px;
+  padding-bottom: 200px;
   margin: 0;
   border-radius: 10px 10px 10px 10px;
   text-align: left;

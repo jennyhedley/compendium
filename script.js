@@ -4,7 +4,7 @@ const buttonEmail = document.getElementById("button-2");
 function getRandomFromList(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
-//part of the typewriter function
+//part of the typewriter function - not working because relies on return command - but this does populate the email body on page load for some reason so leave the code in place
 var i = 0;
 const txt = emailToMum();
 var speed = 100;
@@ -13,14 +13,32 @@ var speed = 100;
 function emailToMum() {
   const openingSent = [
     "I finally caught up on some sleep and can tell you about the circus",
+    "I notice you did not respond to my emails",
+    "Can't wait to see my Mama Bird!",
     "I ran out of happy pills so have to go to the pharmacy today",
     "I'll try to write but the letter from N just made me so angry, like she was guilt tripping me to return",
+    "Sorry for all the misunderstandings",
+    "What are you doing in the midst of all the family chaos",
     "I wrote you a letter and had to log into your account to delete it because I was so upset",
     "I need a little space to allow things to work out and to lose this feeling of desperado",
     "I'm a little stressed right now",
     "I'm in a mood where things keep going wrong",
     "I'm in a tough situation right now",
-    "I bought a one-way ticket for $1300 USD"
+    "Today I took a friend to the circus gym and showed her some basics while the all white circus cat resident sun-bathed",
+    "I got tickets to see La Clique at the Speigaltent",
+    "Today I've started on six outfits to fill my empty rack",
+    "I'm in the pubescent internet cafe from hell - dark and full of pimply boys swearing at their role-play games",
+    "I've been driving around with my eyes closed, working nonstop to pay the bills and settle ownership of this and that with G",
+    "If I get into circus school, it starts end of January",
+    "It rained last night, so sales were dismal because the girls were making no money",
+    "Lost phone for 26 hours or so",
+    "May need more happy pills, unless I force this feeling to pass",
+    "No word from circus school yet",
+    "The balloon people cancelled the flight because of RAIN",
+    "The manager at one of the clubs got fired so the other manager is running around drunk and angry causing stress and uncertainty",
+    "Town was very quiet and the few customers were not making money",
+    "My sewing machine is back, yay, and much to do before work tonight",
+    "I worked from ten in the morning until three in the morning, with a two hour dinner break"
   ];
   const missySent1 = [
     "Missy at least settled in at G's okay and he gave me $500 cash for my car",
@@ -29,7 +47,14 @@ function emailToMum() {
     "Missy is so fluffy and happy living with the girls this week",
     "Missy is under the covers again",
     "I get to keep Missy for a week because G's freako brother is coming to town and Missy hates him",
-    "I may go pick up Missy today but I don't really want to run into G"
+    "I may go pick up Missy today but I don't really want to run into G",
+    "The good news is that Missy doesn't hate me for leaving",
+    "Well at first Missy stared at me like I was an apparition",
+    "I'm training Missy to spew into my paw (covered by tissue of course), or else she goes onto the wood floor so I can clean easier",
+    "Last night scooped up Missy for week of custody",
+    "Yesterday stayed in bed with Missy",
+    "Have to return Missy to her father on Sunday",
+    "It was so hard to say goodbye to Missy"
   ];
   const missySent2 = [
     "I don't know how she manages with all my thrashing",
@@ -37,7 +62,18 @@ function emailToMum() {
     "I will sure miss her though",
     "G lets her sleep under the covers so now she is totally spoiled",
     "G won't let me have Princess Missy and I miss her",
-    "I want my cat though"
+    "I want my cat though",
+    "She is an easier cuddle than Chloe",
+    "She is like my shadow",
+    "She is pure joy",
+    "She sleeps between my legs every night now",
+    "She stays on the bed while I pack",
+    "She's fluffy and SO HAPPY to be with the girls",
+    "She's showing her age, not jumping so high",
+    "Since then she has been quite the usual cuddle addict",
+    "Sometimes I accidentally bury her under clothing and forget she's there",
+    "Sticking to kibble from now on",
+    "I took off my stinky tops and she rolled over them in wild ecstasy, picking up the scent"
   ];
 
   const gSent1 = [
@@ -70,19 +106,61 @@ function emailToMum() {
     "He's been good about not calling me and stuff",
     "He's got tenants so I'm no longer paying rent there",
     "He's sad and self-pitying but I'm glad he's keeping himself on a good path now",
-    "He's still in love but realises it's over"
+    "He's still in love but realises it's over",
+    "I filed his taxes for him"
   ];
-  const closingSent = [
-    "I just drove away",
-    "I keep having weird dreams about packing up my stuff from my father's house",
+  const gSent3 = [
+    "And he managed to make some big steps to combat his gambling",
+    "Don't want to see him again",
+    "Had to hang up on him, just about",
+    "Had to stay super calm to get him to leave the car without him being violent",
+    "His anger is just too hot for comfort, and I told him he needs to continue therapy and self-searching, etc",
+    "I'm happy he hasn't destroyed himself to try to control me",
+    "I've oft told him of late that it's time to learn to be happy alone",
+    "Meanwhile, G's counseling sessions are kicking in and when we argued the other night he finally realised that the problem was his, then he apologised and has been on sparkling behavior ever since",
+    "On Sunday I have to make good on my promise to take G out for his birthday",
+    "On Tuesday, day of departure, I have to give car and cat to G and spend time with him",
+    "He confessed to therapist and is back on track",
+    "Good to be free of G, yes",
+    "So today my big move happened with no notice because G was sending texts from work that gave me a bad feeling",
     "I keep saying I won't marry a gambler",
-    "I finally broke even",
     "I feel so so sad and sick about it",
     "I can get used to his new self",
+    "I just drove away"
+  ];
+
+  const closingSent = [
+    "I keep having weird dreams about packing up my stuff from my father's house",
     "I must have had my most un-fun birthday ever so I request a do-over",
     "I truly budgeted for having these final six weekends of sales",
     "I feel like if the liquids go down faster rather than trickle down in that bad way they will shoot past your epiglottis fast enough to not get caught",
-    "I filed his taxes for him"
+    "The only happy part of my life is going into work and bringing the girls their clothing orders, because I am like Santa Claus, and so long as I have gifts, everyone is happy",
+
+    "One month left here to sort everything out",
+    "No money = trapped kitty",
+
+    "Much is going good in my world, but I am also devastated",
+    "Very hectic tiring couple weeks here",
+
+    "Balloons keep getting cancelled due to inclement weather so other birthday must be arranged!"
+  ];
+  const closingSent2 = [
+    "Back to organization!",
+    "I'm so much happier not being in a dysfunctional relationship",
+    "I think it is time for me to leave this crazy internet place and find my aerial students",
+    "Brave of you to spend four hours in the car with the father of your giants",
+
+    "Do you have any medical MJ to share with your daughter",
+    "You so kind pretty birdy",
+    "Going out to sell clothes in a bit, but must rest and do dishes first",
+    "Got to go teach aerial",
+    "Meow meow mew sleepy",
+    "Meow meow lub you",
+    "Meow",
+    "Sorry but my computer battery is dying as I type, so I will write more soon",
+    "My only light at the end of the tunnel is the clothing and the circus",
+    "No money for food",
+    "No money for insurance premiums"
   ];
   const salutation1 = document.getElementById("salutation");
   const paragraph1 = document.getElementById("emailParagraph1");
@@ -96,12 +174,24 @@ function emailToMum() {
   paragraph2.innerText =
     getRandomFromList(missySent1) + ". " + getRandomFromList(missySent2) + ". ";
   paragraph3.innerText =
-    getRandomFromList(gSent1) + ". " + getRandomFromList(gSent2) + ".";
-  paragraph4.innerText = getRandomFromList(closingSent) + ".";
+    getRandomFromList(gSent1) +
+    ". " +
+    getRandomFromList(gSent2) +
+    "." +
+    " " +
+    getRandomFromList(gSent3) +
+    ".";
+  paragraph4.innerText =
+    getRandomFromList(closingSent) +
+    "." +
+    " " +
+    getRandomFromList(closingSent2) +
+    ".";
   closingSal.innerText = ["Lots of love xx"];
 }
 
 buttonEmail.addEventListener("click", emailToMum);
+
 
 //typewriter function
 function typeWriter() {
@@ -111,7 +201,9 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
+
 //end of code for email to mum
+
 //function psych history
 function addPsychEval(evalText) {
   const subjectContent = document.getElementById("subject-content");
@@ -480,7 +572,7 @@ const sevenSyllables = [
 ];
 const buttonCult = document.getElementById("button-1");
 
-function changeText() {
+function changeResults() {
   const paragraph = document.getElementById("haiku-1-1");
   const paragraphTwo = document.getElementById("haiku-1-2");
   const paragraphThree = document.getElementById("haiku-1-3");
@@ -500,5 +592,334 @@ function changeText() {
   paragraphEight.innerText = getRandomFromList(sevenSyllables);
   paragraphNine.innerText = getRandomFromList(fiveSyllables);
 }
-buttonCult.addEventListener("click", changeText);
+buttonCult.addEventListener("click", changeResults);
 //end of haiku function
+
+//start of search function
+const textWrapper = document.getElementById("text-wrapper");
+      const textInput = document.getElementById("text-input");
+      const words = [
+        
+"aboriginal deaths in custody",
+"aboriginal deaths in custody royal commission",
+"absent father during pregnancy",
+"abuse during pregnancy effect on baby",
+"abusive relationship cycle",
+"age child can refuse visitation",
+"airport watch list removal",
+"airport watch list rules",
+"am i in an abusive relationship",
+"am i in an abusive relationship test",
+"anxiety during pregnancy",
+"anxiety during pregnancy third trimester",
+"app domestic violence",
+"applying for full custody of a child",
+"appropriate dress for court",
+"art of war free download",
+"ask izzy",
+"ask izzy app",
+"australian family law issues in the news",
+"australian law reform commission family law inquiry",
+        
+"barrister vs lawyer australia",
+"barrister vs solicitor",
+"benefits of group therapy domestic violence",
+"berry street victoria",
+"berry street victoria wait times",
+"bpd and psychosis",
+"bpd and psychosis symptoms",
+"braxton hicks contractions",
+"braxton hicks or labour",
+"breastfeeding and childcare",
+"breastfeeding how long",
+"breastfeeding how long is normal",
+        
+"can a drug addict get child custody",
+"can bpd be dangerous",
+"can i demand supervised visitations",
+"can i seek to vary my family court order",
+"can i withhold my child from his father",
+"can you be deported if your child is a citizen australia",
+"can you request a drug test for custody",
+"childcare how expensive",
+"childcare how to apply",
+"childcare near me",
+"child psychologist near me",
+"childrens contact services victoria",
+"child witness domestic violence",
+"church for young families near me",
+"church near me",
+"community housing family violence",
+"connections unitingcare services",
+"contusion to head child medical advice",
+"cost of po box",
+"covert listening device legal",
+"crocodile tears",
+"crocodile tears origin",
+"cycle of abuse",
+"cycle of abuse honeymoon phase",
+"cycle of abuse wheel printable",
+        
+"death threats from partner",
+"deaths from domestic violence in australia",
+"delete search history",
+"delusional jealousy",
+"do family court orders override intervention orders",
+"do narcissists know they are hurting you",
+"domestic violence resource centre",
+"domestic violence support melbourne",
+"drug test false positive rate",
+"dv stats australia",
+
+"earliest memories as a child",
+"effect on baby of stress during pregnancy",
+"effect on baby when mother is crying",
+"effects of no father figure",
+"effects of no father figure on son",
+"emotional abuse",
+"emotional abuse laws australia",
+"emotional manipulation signs",
+"empaths and addiction",
+"empaths and trauma",
+"empaths attract narcissist",
+
+"failed drug test can i withhold visitation",
+"family law act 1975 summary",
+"family law act best interests of the child",
+"family law reform act 1995",
+"family violence during pregnancy",
+"family violence legal support",
+"family violence migrant",
+"family violence support services",
+"family violence victoria",
+"family violence vs domestic abuse",
+"fathers rights during pregnancy",
+"fathers rights movement",
+"femicide map",
+"femicide watch",
+"find spyware on ipad",
+"find spyware on iphone",
+"find spyware on mac",
+"free counselling melbourne",
+"free lock replacement domestic violence",
+
+"generational trauma",
+"generational trauma patterns",
+"gestation period",
+"get name off lease",
+"get name off lease agreement",
+"group therapy domestic violence",
+"group therapy for survivors of domestic violence",
+
+"heavy lifting pregnancy",
+"he makes me think im crazy",
+"honeymoon phase abuse",
+"how can someone have no empathy",
+"how common are death threats",
+"how do narcissists feel when you go no contact",
+"how do you know if a guy is manipulating you",
+"how does a narcissist handle rejection and no contact",
+"how much for legal representation family court",
+"how to address judge",
+"how to deal with a narcissist",
+"how to deal with a narcissist ex",
+"how to file an emergency hearing family court",
+"how to get a restraining order",
+"how to get locks changed",
+"how to make a police report",
+"how to manipulate a manipular",
+"how to respond to family court order melbourne",
+"how to self-represent in court",
+"how to write statutory declaration",
+"human rights australia",
+
+"if i get deported what happens to my child australia",
+"immigration law abuse",
+"immigration law spousal abuse",
+"impact for women",    
+"international travel child custody",
+"intergenerational trauma",
+"intergenerational violence",
+"in the best interest of the child meaning",
+"intouch family violence",
+"is drug induced psychosis permanant",
+"is morbid jealousy a mental illness",
+"is pauline hanson a mens rights activist",
+"is stalking a crime",
+"is stalking a crime in australia",
+
+"keeping a child away from the other parent can backfire",
+"keeping address confidential in divorce",
+"keeping address private",
+"keeping children safe",
+
+"leaving a domestic violence relationship",
+"legal support family violence",
+"letting go of a toxic relationship",
+"lifeline",
+"listening device",
+"listening device detector",
+"lock replacement cost",
+"low cost family violence representation",
+
+"maternal stress and fetal development",
+"maternal stress during pregnancy",
+"maternal stress low birth weight",
+"mental health plan",
+"minimum child support australia",
+"mistakes to avoid during no contact",
+"morbid jealousy disorder",
+"morbid jealousy stories",
+"morbid jealousy treatment",
+"most dangerous time for domestic violence victims",
+"most dangerous time for a victim of domestic abuse",
+"moving costs melbourne",
+"mum deported separated from baby australia",
+
+"ninety days no contact with narcissist",
+"no childcare for court",
+"no conscience meaning",
+"no contact narcissist",
+"no contact narcissist co parent",
+"no father effects",
+"no father figure effects",
+"notary public near me",
+"not gaining weight pregnancy",
+
+"olanzapine xyprexa",
+"olanzapine for psychosis",
+"olanzapine withdrawal",
+"othello syndrome",
+"othello syndrome meaning",
+
+"parental responsibility australia",
+"pathological jealousy treatment",
+"parental responsibility vs custody",
+"personal safety intervention order rules",
+"police confidentiality",
+"police report victoria",
+"positive drug test and child custody australia",
+"privacy settings iphone",
+"privacy settings facebook",
+"process servers melbourne",
+"psychosis vs schizophrenia",
+
+"rapid housing program",
+"rapid housing family violence",
+"reasons to withhold visitation",
+"relationship breakdown",
+"relationship breakdown during pregnancy",
+"relationship breakdown partner visa",
+"reporting rates of domestic violence",
+"robert hare checklist",
+"robert hare psychopath test",
+"robert hare without conscience",
+"royal childrens hospital melbourne address",
+
+"safe steps safety planning",
+"safety plan dv",
+"salvation army domestic violence",
+"side effects zyprexa",
+"signs of an abusive relationship",
+"sisters inside",
+"sole parental responsibility case law",
+"sole parental responsibility meaning",
+"stalking during pregnancy",
+"stalking log template",
+"stalking victims of crime",
+"statistics on domestic violence",
+"stress during pregnancy",
+"stress during pregnancy third trimester",
+"supervised child access visits",
+"supervised urine drug test melbourne",
+"sympathetic amine meaning urine test",
+
+"to stay or leave a marriage",
+"to stay or leave a relationship",
+"toxic stress",
+"toxic stress changes brain architecture",
+"toxic stress derails healthy development",
+"the life changing magic of tidying up",
+"the no contact rule",
+"tracking device",
+"tracking device for cars",
+"tracking device how to detect",
+"types of jealousy disorders",
+
+"urgent application family court",
+"urgent application family court filing fees",
+
+"vcat",
+"vcat break lease",
+"victim vs survivor",
+"victim vs survivor mentality",
+"victims of crime compensation",
+"victims of crime helpline",
+"victims of crime victoria",
+"victoria police domestic violence help",
+"vocat forms",
+"vocat forms counselling",
+"vocat lawyers",
+
+"what are narcissists most afraid of",
+"what comes after hearing mention family court",
+"what do mens rights activists believe",
+"what happens during supervised visit ccs",
+"what happens if i deny visitation",
+"what if child is at risk of harm",
+"what if he fails his drug test",
+"what if my visa is cancelled",
+"what is 4chan",
+"what is a contravention family court order",
+"what is a hearing mention",
+"what is a supervised drug test",
+"what is morbid jealousy",
+"what to tell child about absent father",
+"what to wear for court",
+"wheel of power and control",
+"white ribbon australia",
+"why do judges wear wigs",
+"why does he fake cry",
+"why is it called gaslighting",
+"will a child be separated from his mum australia",
+"womens legal hotline hours",
+"womens legal service",
+
+"yelling effects on infant",
+"youtube no contact rule",
+"youtube psychopath ted talk",
+"youtube psychopath vs sociopath",
+"youtube robert hare",
+
+"zoo melbourne membership",
+"zoom ivo renewal",
+"zyprexa and psychosis",
+"zyprexa normal dose",
+
+      ];
+
+      function changeText(e) {
+        const searchWord = e.target.value.toLowerCase().trim();
+        const resultWords = words.filter(word =>
+          word.toLowerCase().startsWith(searchWord)
+        );
+        // clear exist words
+        while (textWrapper.firstChild) {
+          textWrapper.removeChild(textWrapper.firstChild);
+        }
+        if (searchWord != "") {
+          for (var i = 0; i < resultWords.length; i++) {
+            const line = document.createElement("div");
+            line.innerHTML = resultWords[i];
+            textWrapper.appendChild(line);
+          }
+
+          if (resultWords.length === 0) {
+            const line = document.createElement("div");
+            line.innerHTML = "no results";
+            textWrapper.appendChild(line);
+          }
+        }
+      }
+
+      textInput.addEventListener("input", changeText);
