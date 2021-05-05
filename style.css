@@ -155,6 +155,7 @@ font-family: "PT Serif", serif; font-size: 14px; margin: 4px 2px;}
   font-family: 'Rock Salt', cursive;
     text-shadow:2px 2px white;
   font-size: 12px;
+  padding-bottom: 20px;
 }
 /* card1 is the cult haiku */
 .card3 {
@@ -165,13 +166,13 @@ font-family: "PT Serif", serif; font-size: 14px; margin: 4px 2px;}
   background-color: blue;
   color: white;
   font-family: "PT Serif", serif;
-  font-size: 12px;
+  font-size: 14px;
 }
 /* card4 is the search results */
 .card4 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 10px;
-  padding-bottom: 200px;
+  padding-bottom: 20px;
   margin: 0;
   border-radius: 10px 10px 10px 10px;
   text-align: left;
