@@ -1,3 +1,5 @@
+
+
 /* change link properties */
 a:link {
   text-decoration: none;
@@ -39,6 +41,7 @@ header {
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 2em;
+  background: black;
 }
 
 h1 {
@@ -176,7 +179,7 @@ font-family: "PT Serif", serif; font-size: 14px; margin: 4px 2px;}
   margin: 0;
   border-radius: 10px 10px 10px 10px;
   text-align: left;
-  background-color: #fffggg;
+  background-color: white;
 }
 /* card5 is the chickenwire*/
 .card5 {
@@ -213,6 +216,28 @@ font-family: "PT Serif", serif; font-size: 14px; margin: 4px 2px;}
 }
 @media screen and (max-width: 600px) {
   .column-wide {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .columnS {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .columnL {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .columnXl {
     width: 100%;
     display: block;
     margin-bottom: 20px;
