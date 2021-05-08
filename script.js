@@ -923,3 +923,5 @@ const textWrapper = document.getElementById("text-wrapper");
       }
 
       textInput.addEventListener("input", changeText);
+
+
