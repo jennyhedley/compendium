@@ -37,9 +37,12 @@ header {
   border-radius: 10px 10px 10px 10px;
 }
 body {
-  font-family: helvetica, arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
   margin: 2em;
-  background: white;
+  background: #cbf1e4;
+  background-image: linear-gradient(#cbf1e4, white, #cbf1e4);
+  background-image: cover;
 }
 
 h1 {
@@ -74,10 +77,6 @@ p {
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-}
 
 .button1 {
   border-radius: 1px;
@@ -203,12 +202,13 @@ body {
   text-align: center;
   background-color: black;
   background-image: url("https://chickenwire.netlify.app/img/chickenwire.jpg");
+  
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   border-radius: 10px 10px 10px 10px;
   font-family: "Permanent Marker", cursive;
-  font-size: 2em;
+  font-size: 2.5em;
   letter-spacing: 1.1px;
   line-height: normal;
   color: #FF0000;
@@ -276,3 +276,9 @@ a.glow:hover, a.glow:focus
   }
 }
 
+/* grit texture */
+.grit {
+  -webkit-mask-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2Fgrit.png?v=1620470501324");
+  mask-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2Fgrit.png?v=1620470501324");
+  mask-size: cover;
+}
