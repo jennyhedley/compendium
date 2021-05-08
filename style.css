@@ -77,7 +77,6 @@ p {
   box-sizing: border-box;
 }
 
-
 .button1 {
   border-radius: 1px;
   color: #000000;
@@ -182,8 +181,8 @@ p {
   color: white;
   font-family: "PT Serif", serif;
   font-size: 14px;
-  text-align:center;
-  text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+  text-align: center;
+  text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
 }
 /* card4 is the search results */
 .card4 {
@@ -202,34 +201,35 @@ p {
   text-align: center;
   background-color: black;
   background-image: url("https://chickenwire.netlify.app/img/chickenwire.jpg");
-  
+
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   border-radius: 10px 10px 10px 10px;
   font-family: "Permanent Marker", cursive;
-  font-size: 2.5em;
+  font-size: 3em;
   letter-spacing: 1.1px;
   line-height: normal;
   color: #FF0000;
 }
 /* chickenwire make link text glow on hover */
-a.glow, a.glow:hover, a.glow:focus
-{
-	text-decoration: none;
-	color: red;
-	text-shadow: none;
-	-webkit-transition: 500ms linear 0s;
-	-moz-transition: 500ms linear 0s;
-	-o-transition: 500ms linear 0s;
-	transition: 500ms linear 0s;
-	outline: 0 none;
+a.glow,
+a.glow:hover,
+a.glow:focus {
+  text-decoration: none;
+  color: red;
+  text-shadow: none;
+  -webkit-transition: 500ms linear 0s;
+  -moz-transition: 500ms linear 0s;
+  -o-transition: 500ms linear 0s;
+  transition: 500ms linear 0s;
+  outline: 0 none;
 }
 
-a.glow:hover, a.glow:focus
-{
-	color: white;
-	text-shadow: -1px 1px 8px black, 1px -1px 8px #fff;
+a.glow:hover,
+a.glow:focus {
+  color: white;
+  text-shadow: -1px 1px 8px black, 1px -1px 8px #fff;
 }
 /* One wide column */
 .column-wide {
