@@ -1,5 +1,3 @@
-
-
 /* change link properties */
 a:link {
   text-decoration: none;
@@ -61,7 +59,7 @@ h3 {
   text-align: center;
 }
 h4 {
-  font-family: 'Zen Dots', cursive;
+  font-family: "Zen Dots", cursive;
   font-size: 1.3em;
   font-style: bold;
   text-align: center;
@@ -79,15 +77,28 @@ body {
   font-size: 12px;
 }
 
-.button1 {border-radius: 1px; color: #000000;
+.button1 {
+  border-radius: 1px;
+  color: #000000;
   background-color: #68d911;
   font-family: "Source Code Pro", monospace;
-  font-size: 14px;}
-.button2 {border-radius: 4px;}
-.button3 {border-radius: 8px;
-font-family: "PT Serif", serif; font-size: 14px; margin: 4px 2px;}
-.button4 {border-radius: 12px;}
-.button5 {border-radius: 50%;}
+  font-size: 14px;
+}
+.button2 {
+  border-radius: 4px;
+}
+.button3 {
+  border-radius: 8px;
+  font-family: "PT Serif", serif;
+  font-size: 14px;
+  margin: 4px 2px;
+}
+.button4 {
+  border-radius: 12px;
+}
+.button5 {
+  border-radius: 50%;
+}
 
 /* Float four columns side by side */
 .column {
@@ -110,7 +121,6 @@ font-family: "PT Serif", serif; font-size: 14px; margin: 4px 2px;}
   width: 35%;
   padding: 0 6px;
 }
-
 
 /* Remove extra left and right margins, due to padding in columns */
 .row {
@@ -141,6 +151,7 @@ font-family: "PT Serif", serif; font-size: 14px; margin: 4px 2px;}
   border-radius: 10px 10px 10px 10px;
   text-align: left;
   background-color: #000000;
+  background-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2FcatBG.gif?v=1620459338357");
   color: #68d911;
   font-family: "Source Code Pro", monospace;
   font-size: 12px;
@@ -151,12 +162,11 @@ font-family: "PT Serif", serif; font-size: 14px; margin: 4px 2px;}
   padding: 10px;
   border-radius: 10px 10px 10px 10px;
   text-align: center;
-  background-color: #fffggg;
-  background-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2Fcourt%20copy.png?v=1618813440424"); 
+  background-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2Fcourt.gif?v=1620458492576");
   background-position: center;
   background-size: cover;
-  font-family: 'Rock Salt', cursive;
-    text-shadow:2px 2px white;
+  font-family: "Rock Salt", cursive;
+  text-shadow: 2px 2px white;
   font-size: 12px;
   padding-bottom: 20px;
 }
@@ -179,7 +189,9 @@ font-family: "PT Serif", serif; font-size: 14px; margin: 4px 2px;}
   margin: 0;
   border-radius: 10px 10px 10px 10px;
   text-align: left;
-  background-color: white;
+  background-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2FsearchingBG.gif?v=1620457710273");
+  background-position: center;
+  background-size: cover;
 }
 /* card5 is the chickenwire*/
 .card5 {
