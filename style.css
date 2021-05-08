@@ -162,6 +162,7 @@ body {
   padding: 10px;
   border-radius: 10px 10px 10px 10px;
   text-align: center;
+  background-color: white;
   background-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2Fcourt.gif?v=1620458492576");
   background-position: center;
   background-size: cover;
@@ -189,6 +190,7 @@ body {
   margin: 0;
   border-radius: 10px 10px 10px 10px;
   text-align: left;
+  background-color: white;
   background-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2FsearchingBG.gif?v=1620457710273");
   background-position: center;
   background-size: cover;
@@ -198,7 +200,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 16px;
   text-align: center;
-  background-color: #fffggg;
+  background-color: black;
   background-image: url("https://chickenwire.netlify.app/img/chickenwire.jpg");
   background-attachment: fixed;
   background-position: center;
