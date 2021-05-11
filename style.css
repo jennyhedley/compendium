@@ -84,20 +84,15 @@ p {
   font-family: "Source Code Pro", monospace;
   font-size: 14px;
 }
-.button2 {
-  border-radius: 4px;
-}
+
 .button3 {
   border-radius: 8px;
+  color: #000000;
+  background-color: white;
   font-family: "PT Serif", serif;
   font-size: 14px;
+  font-color: blue;
   margin: 4px 2px;
-}
-.button4 {
-  border-radius: 12px;
-}
-.button5 {
-  border-radius: 50%;
 }
 
 /* Float four columns side by side */
