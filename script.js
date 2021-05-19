@@ -13,7 +13,7 @@ function emailToMum() {
   const openingSent = [
     "I finally caught up on some sleep and can tell you about the circus",
     "I notice you did not respond to my emails",
-    "Can't wait to see my Mama Bird!",
+    "Can't wait to see my Mama Bird",
     "I ran out of happy pills so have to go to the pharmacy today",
     "I'll try to write but the letter from N just made me so angry, like she was guilt tripping me to return",
     "Sorry for all the misunderstandings",
