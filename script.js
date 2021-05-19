@@ -6,7 +6,6 @@ function getRandomFromList(list) {
 }
 //part of the typewriter function - not working because relies on return command - but this does populate the email body on page load for some reason so leave the code in place
 var i = 0;
-const txt = emailToMum();
 var speed = 100;
 
 //email to mum content function
@@ -162,45 +161,70 @@ function emailToMum() {
     "No money for food",
     "No money for insurance premiums"
   ];
-  const salutation1 = document.getElementById("salutation");
-  const paragraph1 = document.getElementById("emailParagraph1");
-  const paragraph2 = document.getElementById("emailParagraph2");
-  const paragraph3 = document.getElementById("emailParagraph3");
-  const paragraph4 = document.getElementById("emailParagraph4");
-  const closingSal = document.getElementById("emailClosingSalutation");
-
-  salutation1.innerText = ["Dear Mum,"];
-  paragraph1.innerText = getRandomFromList(openingSent) + ".";
-  paragraph2.innerText =
-    getRandomFromList(missySent1) + ". " + getRandomFromList(missySent2) + ". ";
-  paragraph3.innerText =
+  const emailGenerated = [
+    "Dear Mum,",
+    getRandomFromList(openingSent) + ".",
+    getRandomFromList(missySent1) + ". " + getRandomFromList(missySent2) + ". ",
     getRandomFromList(gSent1) +
-    ". " +
-    getRandomFromList(gSent2) +
-    "." +
-    " " +
-    getRandomFromList(gSent3) +
-    ".";
-  paragraph4.innerText =
+      ". " +
+      getRandomFromList(gSent2) +
+      ". " +
+      getRandomFromList(gSent3) +
+      ".",
     getRandomFromList(closingSent) +
-    "." +
-    " " +
-    getRandomFromList(closingSent2) +
-    ".";
-  closingSal.innerText = ["Lots of love xx"];
+      ". " +
+      getRandomFromList(closingSent2) +
+      ".",
+    ["Lots of love xx"]
+  ];
+
+  // for (let i = 0; i < emailGenerated.length; i++) {
+  //   const para = document.getElementById("emailParagraph" + i);
+  //   para.innerText = emailGenerated[i];
+  // }
+  return emailGenerated;
 }
+let text = emailToMum();
+let refresh = false;
+buttonEmail.addEventListener("click", function() {
+  refresh = true;
+  text = emailToMum();
+});
 
-buttonEmail.addEventListener("click", emailToMum);
 
+let paraCounter = 0;
+let charCounter = 0;
+let typeWriterInterval;
 
-//typewriter function
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("type").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
+function addLetter() {
+  if ((paraCounter < text.length) && refresh == false ){
+    const para = document.getElementById("emailParagraph" + paraCounter);
+    para.innerHTML = text[paraCounter].slice(0, charCounter + 1);
+    charCounter++;
+    if (charCounter >= text[paraCounter].length) {
+      paraCounter++;
+      charCounter = 0;
+    }
+  } else {
+    for (let i = 0; i < text.length; i++) {
+      const para = document.getElementById("emailParagraph" + i);
+      para.innerHTML = "";
+    }
+    paraCounter = 0;
+    charCounter = 0;
+    refresh = false;
   }
 }
+typeWriterInterval = setInterval(addLetter, 100);
+
+//typewriter function
+// function typeWriter() {
+//   if (i < txt.length) {
+//     document.getElementById("type").innerHTML += txt.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, speed);
+//   }
+// }
 
 //end of code for email to mum
 
@@ -597,368 +621,363 @@ buttonCult.addEventListener("click", changeResults);
 
 //start of search function
 const textWrapper = document.getElementById("text-wrapper");
-      const textInput = document.getElementById("text-input");
-      const words = [
-        
-"aboriginal deaths in custody",
-"aboriginal deaths in custody royal commission",
-"absent father during pregnancy",
-"abuse during pregnancy effect on baby",
-"abusive relationship cycle",
-        "address childrens hospital",
-"age child can refuse visitation",
-"airport watch list removal",
-"airport watch list rules",
-        "am i depressed",
-"am i in an abusive relationship",
-"am i in an abusive relationship test",
-"anxiety during pregnancy",
-"anxiety during pregnancy third trimester",
-"app domestic violence",
-"applying for full custody of a child",
-        "apply ivo",
-"appropriate dress for court",
-"art of war free download",
-"ask izzy",
-"ask izzy app",
-"australian family law issues in the news",
-"australian law reform commission family law inquiry",
-        
-"barrister vs lawyer australia",
-"barrister vs solicitor",
-"benefits of group therapy domestic violence",
-"berry street victoria",
-"berry street victoria wait times",
-"bpd and psychosis",
-"bpd and psychosis symptoms",
-"braxton hicks contractions",
-"braxton hicks or labour",
-        "best child carrier",
-"breastfeeding and childcare",
-"breastfeeding how long",
-"breastfeeding how long is normal",
-        "bridging visa relationship breakdown",
-        "bulk billed therapy",
-        
-"can a drug addict get child custody",
-"can bpd be dangerous",
-        "can i be deported without my son",
-"can i demand supervised visitations",
-"can i seek to vary my family court order",
-"can i withhold my child from his father",
-"can you be deported if your child is a citizen australia",
-"can you request a drug test for custody",
-        "ccs has no cctv",
-"childcare how expensive",
-"childcare how to apply",
-"childcare near me",
-"child psychologist near me",
-"childrens contact services victoria",
-"child witness domestic violence",
-"church for young families near me",
-"church near me",
-"community housing family violence",
-"connections unitingcare services",
-"contusion to head child medical advice",
-"cost of po box",
-"covert listening device legal",
-"crocodile tears",
-"crocodile tears origin",
-"cycle of abuse",
-"cycle of abuse honeymoon phase",
-"cycle of abuse wheel printable",
-        
-"death threats from partner",
-"deaths from domestic violence in australia",
-"delete search history",
-"delusional jealousy",
-"do family court orders override intervention orders",
-"do narcissists know they are hurting you",
-"domestic violence resource centre",
-"domestic violence support melbourne",
-"drug test false positive rate",
-"dv stats australia",
-        "dv will he kill me",
+const textInput = document.getElementById("text-input");
+const words = [
+  "aboriginal deaths in custody",
+  "aboriginal deaths in custody royal commission",
+  "absent father during pregnancy",
+  "abuse during pregnancy effect on baby",
+  "abusive relationship cycle",
+  "address childrens hospital",
+  "age child can refuse visitation",
+  "airport watch list removal",
+  "airport watch list rules",
+  "am i depressed",
+  "am i in an abusive relationship",
+  "am i in an abusive relationship test",
+  "anxiety during pregnancy",
+  "anxiety during pregnancy third trimester",
+  "app domestic violence",
+  "applying for full custody of a child",
+  "apply ivo",
+  "appropriate dress for court",
+  "art of war free download",
+  "ask izzy",
+  "ask izzy app",
+  "australian family law issues in the news",
+  "australian law reform commission family law inquiry",
 
-"earliest memories as a child",
-"effect on baby of stress during pregnancy",
-"effect on baby when mother is crying",
-"effects of no father figure",
-"effects of no father figure on son",
-"emotional abuse",
-"emotional abuse laws australia",
-"emotional manipulation signs",
-"empaths and addiction",
-"empaths and trauma",
-"empaths attract narcissist",
+  "barrister vs lawyer australia",
+  "barrister vs solicitor",
+  "benefits of group therapy domestic violence",
+  "berry street victoria",
+  "berry street victoria wait times",
+  "bpd and psychosis",
+  "bpd and psychosis symptoms",
+  "braxton hicks contractions",
+  "braxton hicks or labour",
+  "best child carrier",
+  "breastfeeding and childcare",
+  "breastfeeding how long",
+  "breastfeeding how long is normal",
+  "bridging visa relationship breakdown",
+  "bulk billed therapy",
 
-"failed drug test can i withhold visitation",
-"family law act 1975 summary",
-"family law act best interests of the child",
-"family law reform act 1995",
-"family violence during pregnancy",
-"family violence legal support",
-"family violence migrant",
-"family violence support services",
-"family violence victoria",
-"family violence vs domestic abuse",
-"fathers rights during pregnancy",
-"fathers rights movement",
-        "filing contravention",
-"femicide map",
-"femicide watch",
-"find spyware on ipad",
-"find spyware on iphone",
-"find spyware on mac",
-"free counselling melbourne",
-"free lock replacement domestic violence",
+  "can a drug addict get child custody",
+  "can bpd be dangerous",
+  "can i be deported without my son",
+  "can i demand supervised visitations",
+  "can i seek to vary my family court order",
+  "can i withhold my child from his father",
+  "can you be deported if your child is a citizen australia",
+  "can you request a drug test for custody",
+  "ccs has no cctv",
+  "childcare how expensive",
+  "childcare how to apply",
+  "childcare near me",
+  "child psychologist near me",
+  "childrens contact services victoria",
+  "child witness domestic violence",
+  "church for young families near me",
+  "church near me",
+  "community housing family violence",
+  "connections unitingcare services",
+  "contusion to head child medical advice",
+  "cost of po box",
+  "covert listening device legal",
+  "crocodile tears",
+  "crocodile tears origin",
+  "cycle of abuse",
+  "cycle of abuse honeymoon phase",
+  "cycle of abuse wheel printable",
 
-"generational trauma",
-"generational trauma patterns",
-"gestation period",
-"get name off lease",
-"get name off lease agreement",
-        "go bad what to pack",
-"group therapy domestic violence",
-"group therapy for survivors of domestic violence",
+  "death threats from partner",
+  "deaths from domestic violence in australia",
+  "delete search history",
+  "delusional jealousy",
+  "do family court orders override intervention orders",
+  "do narcissists know they are hurting you",
+  "domestic violence resource centre",
+  "domestic violence support melbourne",
+  "drug test false positive rate",
+  "dv stats australia",
+  "dv will he kill me",
 
-"hair follicle testing",
-        "heavy lifting pregnancy",
-"he makes me think im crazy",
-"honeymoon phase abuse",
-        "housing blitz dv",
-"how can someone have no empathy",
-"how common are death threats",
-"how do narcissists feel when you go no contact",
-"how do you know if a guy is manipulating you",
-"how does a narcissist handle rejection and no contact",
-"how much for legal representation family court",
-"how to address judge",
-"how to deal with a narcissist",
-"how to deal with a narcissist ex",
-        "how to escape a psychopath",
-"how to file an emergency hearing family court",
-"how to get a restraining order",
-"how to get locks changed",
-        "how to lose baby weight",
-"how to make a police report",
-"how to manipulate a manipular",
-"how to respond to family court order melbourne",
-"how to self-represent in court",
-"how to write statutory declaration",
-"human rights australia",
+  "earliest memories as a child",
+  "effect on baby of stress during pregnancy",
+  "effect on baby when mother is crying",
+  "effects of no father figure",
+  "effects of no father figure on son",
+  "emotional abuse",
+  "emotional abuse laws australia",
+  "emotional manipulation signs",
+  "empaths and addiction",
+  "empaths and trauma",
+  "empaths attract narcissist",
 
-        "if i get deported what happens to my child australia",
-"immigration law abuse",
-"immigration law spousal abuse",
-"impact for women",  
-        "independent childrens lawyer",
-        "infant passport photo",
-"international travel child custody",
-"intergenerational trauma",
-"intergenerational violence",
-"in the best interest of the child meaning",
-"intouch family violence",
-"is drug induced psychosis permanant",
-"is morbid jealousy a mental illness",
-"is pauline hanson a mens rights activist",
-"is stalking a crime",
-"is stalking a crime in australia",
-        
-        "jess hill domestic violence",
-        "jess hill see what you made me do",
-        "jealousy morbid",
-        "jealousy pathological",
-        "jealousy when is it too much",
-        
+  "failed drug test can i withhold visitation",
+  "family law act 1975 summary",
+  "family law act best interests of the child",
+  "family law reform act 1995",
+  "family violence during pregnancy",
+  "family violence legal support",
+  "family violence migrant",
+  "family violence support services",
+  "family violence victoria",
+  "family violence vs domestic abuse",
+  "fathers rights during pregnancy",
+  "fathers rights movement",
+  "filing contravention",
+  "femicide map",
+  "femicide watch",
+  "find spyware on ipad",
+  "find spyware on iphone",
+  "find spyware on mac",
+  "free counselling melbourne",
+  "free lock replacement domestic violence",
 
-"keeping a child away from the other parent can backfire",
-"keeping address confidential in divorce",
-"keeping address private",
-"keeping children safe",
+  "generational trauma",
+  "generational trauma patterns",
+  "gestation period",
+  "get name off lease",
+  "get name off lease agreement",
+  "go bad what to pack",
+  "group therapy domestic violence",
+  "group therapy for survivors of domestic violence",
 
-"leaving a domestic violence relationship",
-"legal support family violence",
-"letting go of a toxic relationship",
-"lifeline",
-"listening device",
-"listening device detector",
-"lock replacement cost",
-        "lock repair melbourne",
-"low cost family violence representation",
+  "hair follicle testing",
+  "heavy lifting pregnancy",
+  "he makes me think im crazy",
+  "honeymoon phase abuse",
+  "housing blitz dv",
+  "how can someone have no empathy",
+  "how common are death threats",
+  "how do narcissists feel when you go no contact",
+  "how do you know if a guy is manipulating you",
+  "how does a narcissist handle rejection and no contact",
+  "how much for legal representation family court",
+  "how to address judge",
+  "how to deal with a narcissist",
+  "how to deal with a narcissist ex",
+  "how to escape a psychopath",
+  "how to file an emergency hearing family court",
+  "how to get a restraining order",
+  "how to get locks changed",
+  "how to lose baby weight",
+  "how to make a police report",
+  "how to manipulate a manipular",
+  "how to respond to family court order melbourne",
+  "how to self-represent in court",
+  "how to write statutory declaration",
+  "human rights australia",
 
-"maternal stress and fetal development",
-"maternal stress during pregnancy",
-"maternal stress low birth weight",
-"mental health plan",
-"minimum child support australia",
-"mistakes to avoid during no contact",
-"morbid jealousy disorder",
-"morbid jealousy stories",
-"morbid jealousy treatment",
-"most dangerous time for domestic violence victims",
-"most dangerous time for a victim of domestic abuse",
-"moving costs melbourne",
-        "moving van rental",
-"mum deported separated from baby australia",
+  "if i get deported what happens to my child australia",
+  "immigration law abuse",
+  "immigration law spousal abuse",
+  "impact for women",
+  "independent childrens lawyer",
+  "infant passport photo",
+  "international travel child custody",
+  "intergenerational trauma",
+  "intergenerational violence",
+  "in the best interest of the child meaning",
+  "intouch family violence",
+  "is drug induced psychosis permanant",
+  "is morbid jealousy a mental illness",
+  "is pauline hanson a mens rights activist",
+  "is stalking a crime",
+  "is stalking a crime in australia",
 
-"ninety days no contact with narcissist",
-"no childcare for court",
-"no conscience meaning",
-"no contact narcissist",
-"no contact narcissist co parent",
-"no father effects",
-"no father figure effects",
-"notary public near me",
-        "notary public elwood",
-"not gaining weight pregnancy",
-        "no visible bruises",
+  "jess hill domestic violence",
+  "jess hill see what you made me do",
+  "jealousy morbid",
+  "jealousy pathological",
+  "jealousy when is it too much",
 
-"olanzapine xyprexa",
-"olanzapine for psychosis",
-"olanzapine withdrawal",
-"othello syndrome",
-"othello syndrome meaning",
+  "keeping a child away from the other parent can backfire",
+  "keeping address confidential in divorce",
+  "keeping address private",
+  "keeping children safe",
 
-"parental responsibility australia",
-"pathological jealousy treatment",
-"parental responsibility vs custody",
-"personal safety intervention order rules",
-"police confidentiality",
-"police report victoria",
-"positive drug test and child custody australia",
-"privacy settings iphone",
-"privacy settings facebook",
-"process servers melbourne",
-        "psio magistrates court",
-"psychosis vs schizophrenia",
+  "leaving a domestic violence relationship",
+  "legal support family violence",
+  "letting go of a toxic relationship",
+  "lifeline",
+  "listening device",
+  "listening device detector",
+  "lock replacement cost",
+  "lock repair melbourne",
+  "low cost family violence representation",
 
-"rapid housing program",
-"rapid housing family violence",
-"reasons to withhold visitation",
-        "recover deleted texts",
-"relationship breakdown",
-"relationship breakdown during pregnancy",
-"relationship breakdown partner visa",
-"reporting rates of domestic violence",
-"robert hare checklist",
-        "robert hare psychopath free",
-"robert hare psychopath test",
-"robert hare without conscience",
-"royal childrens hospital melbourne address",
+  "maternal stress and fetal development",
+  "maternal stress during pregnancy",
+  "maternal stress low birth weight",
+  "mental health plan",
+  "minimum child support australia",
+  "mistakes to avoid during no contact",
+  "morbid jealousy disorder",
+  "morbid jealousy stories",
+  "morbid jealousy treatment",
+  "most dangerous time for domestic violence victims",
+  "most dangerous time for a victim of domestic abuse",
+  "moving costs melbourne",
+  "moving van rental",
+  "mum deported separated from baby australia",
 
-"safe room magistrates court",
-        "safe steps safety planning",
-"safety plan dv",
-"salvation army domestic violence",
-"side effects zyprexa",
-"signs of an abusive relationship",
-"sisters inside",
-"sole parental responsibility case law",
-"sole parental responsibility meaning",
-"stalking during pregnancy",
-"stalking log template",
-"stalking victims of crime",
-"statistics on domestic violence",
-"stress during pregnancy",
-"stress during pregnancy third trimester",
-"supervised child access visits",
-"supervised urine drug test melbourne",
-"sympathetic amine meaning urine test",
+  "ninety days no contact with narcissist",
+  "no childcare for court",
+  "no conscience meaning",
+  "no contact narcissist",
+  "no contact narcissist co parent",
+  "no father effects",
+  "no father figure effects",
+  "notary public near me",
+  "notary public elwood",
+  "not gaining weight pregnancy",
+  "no visible bruises",
 
-"taxibox cost",
-        "tenants union",
-        "to stay or leave a marriage",
-"to stay or leave a relationship",
-"toxic stress",
-"toxic stress changes brain architecture",
-"toxic stress derails healthy development",
-"the life changing magic of tidying up",
-"the no contact rule",
-"tracking device",
-"tracking device for cars",
-"tracking device how to detect",
-"types of jealousy disorders",
+  "olanzapine xyprexa",
+  "olanzapine for psychosis",
+  "olanzapine withdrawal",
+  "othello syndrome",
+  "othello syndrome meaning",
 
-"urgent application family court",
-"urgent application family court filing fees",
+  "parental responsibility australia",
+  "pathological jealousy treatment",
+  "parental responsibility vs custody",
+  "personal safety intervention order rules",
+  "police confidentiality",
+  "police report victoria",
+  "positive drug test and child custody australia",
+  "privacy settings iphone",
+  "privacy settings facebook",
+  "process servers melbourne",
+  "psio magistrates court",
+  "psychosis vs schizophrenia",
 
-"vcat",
-"vcat break lease",
-"victim vs survivor",
-"victim vs survivor mentality",
-"victims of crime compensation",
-"victims of crime helpline",
-"victims of crime victoria",
-"victoria police domestic violence help",
-"vocat forms",
-"vocat forms counselling",
-"vocat lawyers",
+  "rapid housing program",
+  "rapid housing family violence",
+  "reasons to withhold visitation",
+  "recover deleted texts",
+  "relationship breakdown",
+  "relationship breakdown during pregnancy",
+  "relationship breakdown partner visa",
+  "reporting rates of domestic violence",
+  "robert hare checklist",
+  "robert hare psychopath free",
+  "robert hare psychopath test",
+  "robert hare without conscience",
+  "royal childrens hospital melbourne address",
 
-"what are narcissists most afraid of",
-"what comes after hearing mention family court",
-"what do mens rights activists believe",
-"what happens during supervised visit ccs",
-"what happens if i deny visitation",
-"what if child is at risk of harm",
-"what if he fails his drug test",
-        "what if he threatens to kill me",
-"what if my visa is cancelled",
-"what is 4chan",
-"what is a contravention family court order",
-"what is a hearing mention",
-"what is a supervised drug test",
-"what is morbid jealousy",
-"what to tell child about absent father",
-"what to wear for court",
-"wheel of power and control",
-"white ribbon australia",
-"why do judges wear wigs",
-"why does he fake cry",
-"why is it called gaslighting",
-"will a child be separated from his mum australia",
-        "will he hurt child to hurt me",
-        "witness stat dec",
-"womens legal hotline hours",
-"womens legal service",
+  "safe room magistrates court",
+  "safe steps safety planning",
+  "safety plan dv",
+  "salvation army domestic violence",
+  "side effects zyprexa",
+  "signs of an abusive relationship",
+  "sisters inside",
+  "sole parental responsibility case law",
+  "sole parental responsibility meaning",
+  "stalking during pregnancy",
+  "stalking log template",
+  "stalking victims of crime",
+  "statistics on domestic violence",
+  "stress during pregnancy",
+  "stress during pregnancy third trimester",
+  "supervised child access visits",
+  "supervised urine drug test melbourne",
+  "sympathetic amine meaning urine test",
 
-"yelling effects on infant",
-"youtube no contact rule",
-"youtube psychopath ted talk",
-"youtube psychopath vs sociopath",
-"youtube robert hare",
+  "taxibox cost",
+  "tenants union",
+  "to stay or leave a marriage",
+  "to stay or leave a relationship",
+  "toxic stress",
+  "toxic stress changes brain architecture",
+  "toxic stress derails healthy development",
+  "the life changing magic of tidying up",
+  "the no contact rule",
+  "tracking device",
+  "tracking device for cars",
+  "tracking device how to detect",
+  "types of jealousy disorders",
 
-"zoo melbourne membership",
-"zoom ivo renewal",
-"zyprexa and psychosis",
-"zyprexa normal dose",
+  "urgent application family court",
+  "urgent application family court filing fees",
 
-      ];
+  "vcat",
+  "vcat break lease",
+  "victim vs survivor",
+  "victim vs survivor mentality",
+  "victims of crime compensation",
+  "victims of crime helpline",
+  "victims of crime victoria",
+  "victoria police domestic violence help",
+  "vocat forms",
+  "vocat forms counselling",
+  "vocat lawyers",
 
-      function changeText(e) {
-        const searchWord = e.target.value.toLowerCase().trim();
-        const resultWords = words.filter(word =>
-          word.toLowerCase().startsWith(searchWord)
-        );
-        // clear exist words
-        while (textWrapper.firstChild) {
-          textWrapper.removeChild(textWrapper.firstChild);
-        }
-        if (searchWord != "") {
-          for (var i = 0; i < resultWords.length; i++) {
-            const line = document.createElement("div");
-            line.innerHTML = resultWords[i];
-            textWrapper.appendChild(line);
-          }
+  "what are narcissists most afraid of",
+  "what comes after hearing mention family court",
+  "what do mens rights activists believe",
+  "what happens during supervised visit ccs",
+  "what happens if i deny visitation",
+  "what if child is at risk of harm",
+  "what if he fails his drug test",
+  "what if he threatens to kill me",
+  "what if my visa is cancelled",
+  "what is 4chan",
+  "what is a contravention family court order",
+  "what is a hearing mention",
+  "what is a supervised drug test",
+  "what is morbid jealousy",
+  "what to tell child about absent father",
+  "what to wear for court",
+  "wheel of power and control",
+  "white ribbon australia",
+  "why do judges wear wigs",
+  "why does he fake cry",
+  "why is it called gaslighting",
+  "will a child be separated from his mum australia",
+  "will he hurt child to hurt me",
+  "witness stat dec",
+  "womens legal hotline hours",
+  "womens legal service",
 
-          if (resultWords.length === 0) {
-            const line = document.createElement("div");
-            line.innerHTML = "no results";
-            textWrapper.appendChild(line);
-          }
-        }
-      }
+  "yelling effects on infant",
+  "youtube no contact rule",
+  "youtube psychopath ted talk",
+  "youtube psychopath vs sociopath",
+  "youtube robert hare",
 
-      textInput.addEventListener("input", changeText);
+  "zoo melbourne membership",
+  "zoom ivo renewal",
+  "zyprexa and psychosis",
+  "zyprexa normal dose"
+];
 
+function changeText(e) {
+  const searchWord = e.target.value.toLowerCase().trim();
+  const resultWords = words.filter(word =>
+    word.toLowerCase().startsWith(searchWord)
+  );
+  // clear exist words
+  while (textWrapper.firstChild) {
+    textWrapper.removeChild(textWrapper.firstChild);
+  }
+  if (searchWord != "") {
+    for (var i = 0; i < resultWords.length; i++) {
+      const line = document.createElement("div");
+      line.innerHTML = resultWords[i];
+      textWrapper.appendChild(line);
+    }
 
+    if (resultWords.length === 0) {
+      const line = document.createElement("div");
+      line.innerHTML = "no results";
+      textWrapper.appendChild(line);
+    }
+  }
+}
+
+textInput.addEventListener("input", changeText);
