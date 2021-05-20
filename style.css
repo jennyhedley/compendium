@@ -210,6 +210,7 @@ p {
   letter-spacing: 1.1px;
   line-height: normal;
   color: #FF0000;
+  margin-bottom: 200px;
 }
 /* chickenwire make link text glow on hover */
 a.glow,
