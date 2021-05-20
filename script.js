@@ -452,7 +452,7 @@ const fiveSyllables = [
   "prayed I want to live",
   "that second I knew",
   "I could not–would not",
-  "Tim break my spirit",
+  "Tim broke my spirit",
   "miraculously",
   "the police took us",
   "we'd had an accident",
