@@ -4,7 +4,7 @@ const buttonEmail = document.getElementById("button-2");
 function getRandomFromList(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
-//part of the typewriter function - not working because relies on return command - but this does populate the email body on page load for some reason so leave the code in place
+
 var i = 0;
 var speed = 100;
 
@@ -134,13 +134,10 @@ function emailToMum() {
     "I truly budgeted for having these final six weekends of sales",
     "I feel like if the liquids go down faster rather than trickle down in that bad way they will shoot past your epiglottis fast enough to not get caught",
     "The only happy part of my life is going into work and bringing the girls their clothing orders, because I am like Santa Claus, and so long as I have gifts, everyone is happy",
-
     "One month left here to sort everything out",
     "No money = trapped kitty",
-
     "Much is going good in my world, but I am also devastated",
     "Very hectic tiring couple weeks here",
-
     "Balloons keep getting cancelled due to inclement weather so other birthday must be arranged!"
   ];
   const closingSent2 = [
@@ -148,7 +145,6 @@ function emailToMum() {
     "I'm so much happier not being in a dysfunctional relationship",
     "I think it is time for me to leave this crazy internet place and find my aerial students",
     "Brave of you to spend four hours in the car with the father of your giants",
-
     "Do you have any medical MJ to share with your daughter",
     "You so kind pretty birdy",
     "Going out to sell clothes in a bit, but must rest and do dishes first",
@@ -162,26 +158,14 @@ function emailToMum() {
     "No money for insurance premiums"
   ];
   const emailGenerated = [
-    "Dear Mum,",
-    getRandomFromList(openingSent) + ".",
-    getRandomFromList(missySent1) + ". " + getRandomFromList(missySent2) + ". ",
-    getRandomFromList(gSent1) +
-      ". " +
-      getRandomFromList(gSent2) +
-      ". " +
-      getRandomFromList(gSent3) +
-      ".",
-    getRandomFromList(closingSent) +
-      ". " +
-      getRandomFromList(closingSent2) +
-      ".",
-    ["Lots of love xx"]
+      "Dear Mum,",
+      getRandomFromList(openingSent) + ".",
+      getRandomFromList(missySent1) + ". " + getRandomFromList(missySent2) + ". ",
+      getRandomFromList(gSent1) + ". " + getRandomFromList(gSent2) + ". " + getRandomFromList(gSent3) + ".",
+      getRandomFromList(closingSent) + ". " + getRandomFromList(closingSent2) + ".",
+      ["Lots of love xx"]
   ];
 
-  // for (let i = 0; i < emailGenerated.length; i++) {
-  //   const para = document.getElementById("emailParagraph" + i);
-  //   para.innerText = emailGenerated[i];
-  // }
   return emailGenerated;
 }
 let text = emailToMum();
@@ -191,13 +175,12 @@ buttonEmail.addEventListener("click", function() {
   text = emailToMum();
 });
 
-
 let paraCounter = 0;
 let charCounter = 0;
 let typeWriterInterval;
 
 function addLetter() {
-  if ((paraCounter < text.length) && refresh == false ){
+  if (paraCounter < text.length && refresh == false) {
     const para = document.getElementById("emailParagraph" + paraCounter);
     para.innerHTML = text[paraCounter].slice(0, charCounter + 1);
     charCounter++;
@@ -216,16 +199,6 @@ function addLetter() {
   }
 }
 typeWriterInterval = setInterval(addLetter, 100);
-
-//typewriter function
-// function typeWriter() {
-//   if (i < txt.length) {
-//     document.getElementById("type").innerHTML += txt.charAt(i);
-//     i++;
-//     setTimeout(typeWriter, speed);
-//   }
-// }
-
 //end of code for email to mum
 
 //function psych history
@@ -325,7 +298,6 @@ function psychFunction() {
       "[X] suffered a drug induced psychosis which resulted in a number of paranoid behaviours including stalking and planting a listening device ...  He denies domestic violence, he admits to there being drug scales in the boot of the car, which he said were there from [date] when he used them because he disliked being cheated by drug dealers"
     );
   }
-  //need these closing braces
 }
 //end of psych function
 
@@ -844,6 +816,7 @@ const words = [
 
   "parental responsibility australia",
   "pathological jealousy treatment",
+  "patriarchy goals",
   "parental responsibility vs custody",
   "personal safety intervention order rules",
   "police confidentiality",
@@ -981,3 +954,4 @@ function changeText(e) {
 }
 
 textInput.addEventListener("input", changeText);
+// end search function code
