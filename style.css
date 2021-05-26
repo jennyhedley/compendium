@@ -31,7 +31,7 @@ img {
 
 /* set background image for poem title */
 header {
-  background-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2Fstationery-155143_960_720.png?v=1618796683465");
+  background-image: url("./images/paper.png");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -157,7 +157,7 @@ p {
   border-radius: 10px 10px 10px 10px;
   text-align: left;
   background-color: #000000;
-  background-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2FcatBG.gif?v=1620459338357");
+  background-image: url("./images/catBG.gif");
   color: #68d911;
   font-family: "Source Code Pro", monospace;
   font-size: 12px;
@@ -170,7 +170,7 @@ p {
   border-radius: 10px 10px 10px 10px;
   text-align: center;
   background-color: white;
-  background-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2Fcourt.gif?v=1620458492576");
+  background-image: url("./images/psychBG.gif");
   background-position: center;
   background-size: cover;
   font-family: "Rock Salt", cursive;
@@ -206,7 +206,7 @@ p {
   padding: 16px;
   text-align: center;
   background-color: black;
-  background-image: url("https://chickenwire.netlify.app/img/chickenwire.jpg");
+  background-image: url("./images/chickenwire.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -305,7 +305,7 @@ a.glow2:focus {
 
 /* grit texture */
 .grit {
-  -webkit-mask-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2Fgrit.png?v=1620470501324");
-  mask-image: url("https://cdn.glitch.com/02600171-b43e-46dd-a21e-bfc0b9a82267%2Fgrit.png?v=1620470501324");
+  -webkit-mask-image: url("./images/grit.png");
+  mask-image: url("./images/grit.png");
   mask-size: cover;
 }
